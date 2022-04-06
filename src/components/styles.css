@@ -1,0 +1,396 @@
+:root{
+	--dark-blue: hsl(209, 23%, 22%);
+	--very-dark-blue: hsl(207, 26%, 17%);
+	--very-dark-blue-lmd: hsl(200, 15%, 8%);
+	--dark-gray: hsl(0, 0%, 52%);
+	--very-light-gray: hsl(0, 0%, 98%);
+	--white: hsl(0, 0%, 100%);
+	--shadow: 2px 2px 6px -2px #000;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body{
+    background-color: var(--very-dark-blue-lmd);
+}
+
+.app{
+    background-color: var(--very-dark-blue);
+    height: 100%;
+    min-height: 100vh;
+    padding-bottom: 2em;
+}
+
+a{
+    text-decoration: none;
+}
+
+.grid{
+    margin-top: .5em;
+    display: grid;
+    grid-auto-rows: auto;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(min( 100% , 320px ), 1fr));
+    justify-items: baseline;
+}
+
+/*-------------------- Header Styles ------------------------- */
+
+.header{
+    height: 80px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2%;
+    box-shadow: var(--shadow);
+    font-size: calc( .8em + .2vw);
+}
+
+    .toggleMode{
+        height: 40px;
+        width: 100px;
+        background-color: transparent;
+        border: none;
+        color: var(--white);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+/*-------------------- CountryCard Styles ------------------------- */
+
+
+.countryCard{
+    display: block;
+    height: 280px;
+    width: 80%;
+    max-width: 320px;
+    min-width: 240px;
+    background: var(--dark-blue);
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+    color: var(--white);
+    margin: auto;
+    overflow: hidden;
+}
+
+.countryCard:hover{
+    box-shadow: 0px 0px 12px 0px #000;
+    transform: scale(1.05);
+    transition: .4s;
+}
+
+    .countryFlag{
+        height: 50%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .countryName{
+        margin: .8em;
+        font-size: 1.2em;
+    }
+
+    .cardStats{
+        margin: 1em;
+        height: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+/*-------------------- Nav Styles ------------------------- */
+
+.nav{
+    height: 20vh;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+    .searchForm{
+        height: 26%;
+        width: 100%;
+        max-width: 420px;
+        position: relative ;
+    }
+
+        .searchIcon{
+            position: absolute;
+            top: calc( 50% - 12px );
+            left: 2%;
+        }
+
+        .searchInput{
+            background-color: var(--dark-blue);
+            border: none;
+            border-radius: 4px;
+            height: 100%;
+            width: 100%;
+            padding-left: calc(2em + 2%);
+            outline: none;
+            color: var(--white);
+            box-shadow: var(--shadow);
+        }
+
+    .optionBox{
+        height: 26%;
+        width: 100%;
+        max-width: 260px;
+        background-color: var(--dark-blue);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--white);
+        padding: 0 .8em;
+        border-radius: 4px;
+        box-shadow: var(--shadow);
+        cursor: pointer;
+        position: relative;
+    }
+
+        .optionCurrent{
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .optionImg{
+            height: 70%;
+            width: auto;
+        }
+
+    .options{
+        width: 100%;
+        background-color: var(--dark-blue);
+        position: absolute;
+        top: calc(100% + 1em);
+        list-style: none;
+        border-radius: 4px;
+        box-shadow: var(--shadow);
+        margin-left: -.8em;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: all .4s;
+        
+    }
+
+    .optionBox.active > .options{
+        transform: scaleY(1);
+    }
+
+    .options > li {
+        height: 1.6em;
+        display: flex;
+        align-items: center;
+        padding-left: .8em ;
+    }
+
+    .options > li:hover{
+        background-color: rgba(0,0,0,.3);
+    }
+
+/*-------------------- Countriy information styles ------------------------- */
+
+.backLink{
+    display: flex;
+    background-color: var(--dark-blue);
+    height: 40px;
+    width: 80px;
+    color: var(--white);
+    text-decoration: none;
+    margin: 2em;
+    box-shadow: var(--shadow);
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+.countryInformation{
+    min-height: calc( 100vh - 40px - 2em - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);
+}
+
+.bolder{
+    font-weight: bolder;
+}
+
+.countryImg{
+    height: auto;
+    width: 80%;
+}
+
+.countryInfo{
+    width: 80%;
+    margin-top: 1em;
+}
+
+.countryInfo__primaryInfo , .countryInfo__secondaryInfo, .countryInfo__borderLines{
+    margin: 1em 0;
+}
+
+.countryInfo__borderLines{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.countryInfo__borderLines--title{
+    width: 100%;
+}
+
+.borderLink{
+    height: 1.4em;
+    color: var(--white);
+    background-color: var(--dark-blue);
+    border-radius: 4px;
+    margin: calc(2% + 1px);
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--shadow);
+}
+
+/*-------------------- Loader styles ------------------------- */
+
+.loader{
+    height: min(40vh , 40vw);
+    width: min(40vh , 40vw);
+    margin: 3em auto;
+}
+
+.circle{
+    height: 100%;
+    width: 100%;
+    border: 20px solid hsl(217, 4%, 36%);
+    filter: brightness(2);
+    border-radius: 50%;
+    border-left-color: hsl(212, 38%, 19%);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/*-------------------- Loader styles ------------------------- */
+
+.error{
+    height: 40vh;
+    width: 80%;
+    color: var(--white);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.errorMessage{
+    font-size: 3em;
+    font-weight: bolder;
+}
+
+.errorButton{
+    height: 6vh;
+    width: 12vw;
+    background-color: var(--dark-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+}
+
+.errorButton:hover{
+    box-shadow: 0px 0px 12px 0px #000;
+    transform: scale(1.05);
+    transition: .4s;
+}
+
+/*-------------------- not found page styles ------------------------- */
+
+.pageNotFound{
+    height: 80%;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .pageNotFound__img{
+        height: 100%;
+        width: auto;
+    }
+
+/*medias: 320 480 600 768 1024 1200 1440*/
+/*-------------------- Media queries ------------------------- */
+
+@media all and ( min-width: 768px ){
+    .nav{
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2%;
+    }
+
+        .searchForm{
+            width: 80%;
+        }
+
+        .optionBox{
+            width: 80%;
+        }
+
+}
+
+@media all and ( min-width: 1024px ){
+    .countryInformation{
+        flex-direction: row;
+        width: 90%;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    .countryImg{
+        width: 45%;
+    }
+    
+    .countryInfo{
+        width: 45%;
+        margin-top: 0;
+    }
+}
+
+@media all and ( min-width: 1440px ){
+    .app {
+        max-width: 1440px;
+        margin: auto;
+    }
+
+    .nav{
+        max-height: 140px;
+    }
+}
