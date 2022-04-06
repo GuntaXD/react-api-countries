@@ -26,7 +26,7 @@ export default function CountryInformation(props){
 
         return (
             <>
-                <Link to="/" className="backLink" onClick={props.backOnClick}>Back</Link>
+                <Link to="/react-api-countries" className="backLink" onClick={props.backOnClick}>Back</Link>
                     <div className="countryInformation">
                         <img 
                         className="countryImg" 
@@ -82,7 +82,7 @@ export default function CountryInformation(props){
                                 <p>No country borders</p>
                                 : borders.map((border)=>{
                                     return (
-                                    <Link to={`/CountryInformation/${border}`}
+                                    <Link to={`/react-api-countries/CountryInformation/${border}`}
                                     key={border}
                                     className="borderLink"
                                     >

@@ -114,7 +114,7 @@ class App extends Component{
                 <Router>
                     <Header switchMode={this.switchMode}></Header>
                     <Routes>
-                        <Route path="/" element={
+                        <Route path="/react-api-countries" element={
                             <>
                                 <Nav 
                                 myOnClick={this.handleSelectBox}
