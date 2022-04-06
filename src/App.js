@@ -147,7 +147,7 @@ class App extends Component{
                             </>
                         }/>
                         <Route
-                        path="CountryInformation/:name" 
+                        path="/react-api-countries/CountryInformation/:name" 
                         element={<CountryInformation  
                             countries={this.state.allCountries}
                             backOnClick={this.backOnClick}

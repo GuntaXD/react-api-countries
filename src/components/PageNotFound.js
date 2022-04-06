@@ -7,7 +7,7 @@ export default function PageNotFound(props){
         <>
             <div className="pageNotFound">
                 <img className="pageNotFound__img" src={img}></img>
-                <Link to={"/"} reloadDocument className="backLink">Go home</Link>
+                <Link to={"/react-api-countries"} reloadDocument className="backLink">Go home</Link>
             </div>
         </>
     )
