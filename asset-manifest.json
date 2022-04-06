@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-api-countries/static/css/main.6c69744b.css",
-    "main.js": "/react-api-countries/static/js/main.50939294.js",
+    "main.js": "/react-api-countries/static/js/main.c367ebc7.js",
     "static/media/404.svg": "/react-api-countries/static/media/404.7f74d0147761b817988acd262d5cc1f1.svg",
     "index.html": "/react-api-countries/index.html",
     "static/media/down-arrow-black.svg": "/react-api-countries/static/media/down-arrow-black.3a653222063358f924ff7e11b8466ca0.svg",
@@ -11,10 +11,10 @@
     "static/media/moon.svg": "/react-api-countries/static/media/moon.54fc31f1469d9f690622400dcc3e54f8.svg",
     "static/media/moon-black.svg": "/react-api-countries/static/media/moon-black.b298ef36ae357f1cf63a13b356658d55.svg",
     "main.6c69744b.css.map": "/react-api-countries/static/css/main.6c69744b.css.map",
-    "main.50939294.js.map": "/react-api-countries/static/js/main.50939294.js.map"
+    "main.c367ebc7.js.map": "/react-api-countries/static/js/main.c367ebc7.js.map"
   },
   "entrypoints": [
     "static/css/main.6c69744b.css",
-    "static/js/main.50939294.js"
+    "static/js/main.c367ebc7.js"
   ]
 }
