@@ -86,8 +86,22 @@ class App extends Component{
     handleSearchBar(e){
         let input = e.target;
 
+        let countries , selection = this.state.selection
+
+        if ( selection !== "All" ){
+
+            countries = this.state.allCountries.filter((country) => { 
+                    return country.region === selection;
+                })
+
+        }else{
+
+            countries = this.state.allCountries;
+            
+        }
+
         this.setState({
-            countries: this.state.countries.filter((country)=>{
+            countries: countries.filter((country)=>{
                 return country.name.common.toLowerCase().startsWith( input.value.toLowerCase() );
             })
         })
