@@ -87,7 +87,7 @@ class App extends Component{
         let input = e.target;
 
         this.setState({
-            countries: this.state.allCountries.filter((country)=>{
+            countries: this.state.countries.filter((country)=>{
                 return country.name.common.toLowerCase().startsWith( input.value.toLowerCase() );
             })
         })
