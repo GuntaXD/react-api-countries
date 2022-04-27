@@ -118,7 +118,7 @@ class App extends Component {
           <Header switchMode={this.switchMode}></Header>
           <Routes>
             <Route
-              path="/react-api-countries"
+              path="/"
               element={
                 <>
                   <Nav
@@ -150,7 +150,7 @@ class App extends Component {
               }
             />
             <Route
-              path="/react-api-countries/CountryInformation/:name"
+              path="/CountryInformation/:name"
               element={
                 <CountryInformation
                   countries={this.state.allCountries}

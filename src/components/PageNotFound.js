@@ -1,14 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import img from "../assets/404.svg"
+import img from "../assets/404.svg";
 
-export default function PageNotFound(props){
-    return(
-        <>
-            <div className="pageNotFound">
-                <img className="pageNotFound__img" src={img}></img>
-                <Link to={"/react-api-countries"} reloadDocument className="backLink">Go home</Link>
-            </div>
-        </>
-    )
+export default function PageNotFound(props) {
+  return (
+    <>
+      <div className="pageNotFound">
+        <img className="pageNotFound__img" src={img}></img>
+        <Link to={"/"} reloadDocument className="backLink">
+          Go home
+        </Link>
+      </div>
+    </>
+  );
 }
